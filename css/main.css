@@ -582,8 +582,8 @@ summary {
   border-color: var(--vivid-blue);
 }
 .callback__input:not(:placeholder-shown):focus:invalid {
-  color: tomato;
-  border-color: tomato;
+  color: var(--vivid-blue);
+  border-color: var(--vivid-blue);
 }
 
 .callback__icon {
@@ -629,6 +629,10 @@ summary {
   outline: transparent;
   border: 1px solid var(--dark-gray);
 }
+.callback__textarea:hover {
+  outline: transparent;
+  border: 1px solid var(--dark-gray);
+}
 
 .policy-block {
   display: flex;
@@ -654,7 +658,7 @@ summary {
   vertical-align: middle;
   border-color: var(--vivid-blue);
   background-color: var(--vivid-blue);
-  background-image: url("../images/form-check.svg");
+  background-image: url(".//icons.svg#icon-icon-check");
   background-size: contain;
   background-origin: border-box;
 }

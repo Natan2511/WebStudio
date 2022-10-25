@@ -181,8 +181,8 @@
   }
 
   &:not(:placeholder-shown):focus:invalid {
-    color: tomato;
-    border-color: tomato;
+    color: var(--vivid-blue);
+    border-color: var(--vivid-blue);
   }
 }
 
@@ -246,6 +246,10 @@
     outline: transparent;
     border: 1px solid var(--dark-gray);
   }
+  &:hover {
+    outline: transparent;
+    border: 1px solid var(--dark-gray);
+  }
 }
 
 // Политика для формы (чекбокс и текст)
@@ -285,7 +289,7 @@
   border-color: var(--vivid-blue);
 
   background-color: var(--vivid-blue);
-  background-image: url("../images/form-check.svg");
+  background-image: url(".//icons.svg#icon-icon-check");
   background-size: contain;
   background-origin: border-box;
 }
