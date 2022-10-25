@@ -1,117 +1,37 @@
+// Футер
+
 .footer {
-  background: var(--very-dark-grayish-blue);
   padding: 60px 0px;
-  display: flex;
-  .footer-section {
-    @media screen and (min-width: 480px) {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-  }
-  &-block {
-    display: flex;
-    align-items: baseline;
-    @media screen and (min-width: 480px) {
-      display: block;
-    }
-  }
 
-  &-logo {
-    font-family: "Raleway";
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
-    color: var(--vivid-blue);
-    &-text {
-      color: var(--white);
-    }
-    @media screen and (min-width: 480px) {
-      width: 154px;
-      height: 28px;
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
-  &-container {
-    margin-top: 20px;
-    &__list {
-      margin-bottom: 9px;
-    }
-    &__address {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 0.03em;
-      color: var(--white);
-      transition: color var(--transition-animation);
-      &:hover,
-      :focus {
-        border-color: var(--vivid-blue);
-      }
-    }
-    &__contacts {
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0.03em;
-      color: rgba(255, 255, 255, 0.6);
-      transition: color var(--transition-animation);
-      &:hover,
-      :focus {
-        color: var(--vivid-blue);
-      }
-    }
-  }
+  background-color: var(--very-dark-grayish-blue);
+
+  color: var(--white);
 }
-.social {
-  @media screen and (min-width: 480px) {
-    margin-bottom: 60px;
-  }
 
-  &-tittle {
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--white);
-    padding-bottom: 20px;
+// Обёртка для блоков в футере
 
-    @media screen and (min-width: 480px) {
-      text-align: center;
-    }
-  }
-  &-list {
+.footer-blocks {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
-    gap: 10px;
-    @media screen and (min-width: 480px) {
-      justify-content: center;
-    }
-    &__item {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-    }
-    &__link {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: background var(--transition-animation);
-      &:hover,
-      &:focus {
-        background-color: var(--vivid-blue);
-      }
-    }
-    &__icon {
-      fill: var(--white);
-    }
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 
 .input {
+  width: 570px;
+  height: 86px;
+  margin-left: 93px;
   &-tittle {
     font-weight: 700;
     font-size: 14px;
@@ -120,11 +40,10 @@
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 20px;
-    @media screen and (min-width: 480px) {
-      text-align: center;
-    }
   }
   &-container {
+    display: flex;
+    gap: 12px;
     &__mail {
       width: 358px;
       height: 50px;
@@ -135,10 +54,268 @@
       display: flex;
       padding-left: 16px;
       color: var(--white);
-      @media screen and (min-width: 480px) {
-        width: 100%;
-        margin-bottom: 20px;
-      }
     }
   }
+}
+
+// Общий ьлок с адресом и лого в футере
+
+.address-block {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 65px;
+  }
+}
+
+// Лого в футере
+
+.footer__logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  color: var(--white);
+}
+
+/* Контакты в футере */
+
+.adress {
+  font-style: normal;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--white);
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Улица в футере
+
+.adress__map {
+  margin-top: 0;
+  padding-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+// Список телефонов и почт
+
+.adress__list {
+  list-style: none;
+}
+
+// Элементы списка
+
+.adress__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+// Ссылка для элементов списка
+
+.adress__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+
+  transition: color var(--transition-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--vivid-blue);
+  }
+}
+
+// Общий стиль лого
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  text-decoration: none;
+
+  &__text {
+    color: var(--vivid-blue);
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+// Логотип в хедере
+
+.header__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+// Блок соц сетей в футере
+
+.networks {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+// Тайтл блока
+
+.networks__title {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+// Список социальных сетей
+
+.networks__list {
+  list-style: none;
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+// Элемент списка
+
+.networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+// Ссылка элемента
+
+.networks__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+// Иконки соцальных сетей
+
+.networks__icon {
+  fill: var(--white);
+
+  .networks__link:hover &,
+  .networks__link:focus & {
+    fill: var(--white);
+  }
+}
+
+// Общий блок для формы подписки в футере
+
+.subscribe {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+}
+
+// Форма для подписки
+
+.subscribe__field {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+// Поле формы для подписки
+
+.subscribe__input {
+  padding: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: var(--very-dark-grayish-blue);
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: all var(--transition-animation);
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    outline: transparent;
+    border: 1px solid currentColor;
+  }
+
+  &:not(:placeholder-shown):focus:valid {
+    color: green;
+    border-color: green;
+  }
+
+  &:not(:placeholder-shown):focus:invalid {
+    color: tomato;
+    border-color: tomato;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 50px;
+
+    margin-right: 12px;
+  }
+}
+
+// Кнопка подписки
+
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 28px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Иконка для кнопки подписки
+
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }

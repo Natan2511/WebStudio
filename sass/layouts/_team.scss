@@ -1,88 +1,134 @@
-.container-team {
-  background: var(--light-grayish-blue);
+// Секция "Наша команда"
+
+.team {
+  background-color: var(--light-grayish-blue);
 }
-.team-text {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--very-dark-gray);
-  margin-bottom: 30px;
-  @media screen and (min-width: 480px) {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 33px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--very-dark-gray);
+
+// Список секции
+
+.team__list {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    list-style: none;
+    display: flex;
   }
 }
-.team-list {
-  display: flex;
-  gap: 30px;
-  @media screen and (min-width: 480px) {
-    display: block;
-  }
-  &-item {
-    background: var(--white);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    @media screen and (min-width: 480px) {
+// Элемент списка
+
+.team__item {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 30px;
     }
   }
-  &-link {
-    padding-top: 30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 1 * 30px) / 2);
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
   }
-  &-after {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--very-dark-gray);
-    padding-bottom: 10px;
-  }
-  &-tittle {
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--dark-gray);
-    margin-bottom: 16px;
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
-.social-networks {
+// Обёртка для контента элемента
+
+.team__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+// Тайтл элемента (имя сотрудника)
+
+.team__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--very-dark-gray);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+// Текст элемента (должность сотрудника)
+
+.team__text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--dark-gray);
+
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+// Список социальных сетей
+
+.social {
+  list-style: none;
   display: flex;
   justify-content: center;
   gap: 10px;
-  .social-networks-list {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 30px;
-  }
-  .social-networks-item {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color var(--transition-animation);
-    &:hover {
-      background-color: var(--vivid-blue);
-    }
-  }
-  .social-networks-icon {
-    fill: var(--grayish-blue);
-    transition: fill var(--transition-animation);
-  }
-  &-item:hover &-icon {
+}
+
+// Элемент списка социальных сетей
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+// Иконки соццальных сетей
+
+.social__icon {
+  .social__link:hover &,
+  .social__link:focus & {
     fill: var(--white);
   }
+}
+.media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color var(--transition-animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--vivid-blue);
+  }
+}
+
+// Иконка социальной сети
+
+.media-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--grayish-blue);
+
+  transition: fill var(--transition-animation);
 }

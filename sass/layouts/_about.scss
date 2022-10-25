@@ -1,49 +1,129 @@
-.about {
+// Секция Героя
+
+.hero {
   max-width: 1600px;
   min-height: 400px;
+
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(
+      to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/header.png);
+    url(../images/mobile/hero-480@1x.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  .about__container {
-    max-width: 360px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 118px 0;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile/hero-480@2x.jpg);
   }
-  .about__text {
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet/hero-768@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet/hero-768@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 600px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/hero-1200@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/desktop/hero-1200@2x.jpg);
+    }
+  }
+}
+
+// Обёртка вокруг заголовка и кнопки
+
+.hero__content {
+  max-width: 360px;
+  padding: 118px 0;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    padding: 200px 0;
+  }
+
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+// Тайтл Героя
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: var(--white);
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+    font-family: "Roboto";
+    font-style: normal;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 42px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
-    @media screen and (min-width: 480px) {
-      width: 360px;
-      height: 84px;
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 26px;
-      line-height: 42px;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--white);
-    }
   }
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+// Кнопка "Заказать услугу"
+
+.hero__btn {
+  padding: 10px 32px;
 }
