@@ -1,3 +1,10 @@
+.picture-section {
+  @media screen and (min-width: 480px) {
+    display: none;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .picture-text {
   font-weight: 700;
   font-size: 36px;

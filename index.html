@@ -13,17 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+     <header class="header">
       <div class="container header__container">
-        <!-- LOGO -->
         <a class="header__logo link" href="./index.html"
           >Web<span class="header__logo--color">Studio</span></a
         >
-        <!-- NAV -->
-        <nav>
+        <nav class="navigation">
           <ul class="menu">
             <li>
               <a class="menu__link link menu__studio" href="./index.html"
@@ -38,7 +36,6 @@
             </li>
           </ul>
         </nav>
-        <!-- COTACTS -->
         <ul class="connect">
           <li class="connect__list">
             <a class="connect__contacts link" href="mailto:info@devstudio.com"
@@ -55,29 +52,75 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href=".//images/menu.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <button type="button" class="menu-close" data-menu-close>
+            <svg width="40" height="40">
+              <use href=".//images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mob-menu__top">
+            <ul class="mob-menu__list">
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link link" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link link" href="portfolio.html">Портфоліо</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a class="mob-menu__link link" href="#">Контакти</a>
+                </li>
+            </ul>
+          </div>
+           <div class="mob-menu__bottom">
+             <ul class="connect-menu">
+              <li class="connect-menu__list-tel">
+                <a class="connect-menu__tel link" href="”tel:+380961111111”">+38 096 111 11 11</a>
+              </li>
+              <li class="connect-menu__list-mail">
+                <a class="connect-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mob-soc">
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" target="_blank" rel="noopener norefferer nofollow" href="">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" target="_blank" rel="noopener norefferer nofollow" href="">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" target="_blank" rel="noopener norefferer nofollow" href="">Facebook</a>
+              </li>
+              <li class="mob-soc__item-no">
+                <a class="mob-soc__link link" target="_blank" rel="noopener norefferer nofollow" href="">LinkedIn</a>
+              </li>
+            </ul>
+           </div>
+        </div>
       </div>
     </header>
     <main>
-      <!-- ABOUT -->
       <section class="about">
         <div class="container about__container">
-          <h1 class="about__text">
-            Ефективні рішення для вашого бізнесу
-          </h1>
+          <h1 class="about__text">Ефективні рішення для вашого бізнесу</h1>
           <button class="about__button" type="button" data-modal-open>
-            <span class="about__button--text"
-              >Замовити послугу</span
-            >
+            Замовити послугу
           </button>
         </div>
       </section>
-      <!-- SPECIALITIES -->
       <section class="section_priorities section">
         <div class="container">
           <h2 class="visually-hidden">Specialities</h2>
           <ul class="specialities-articles">
-            <!-- Peculiarities 1 -->
-            <li>
+            <li class="specialities-articles__list">
               <div class="specialities-articles-icon">
                 <svg width="70" height="70">
                   <use href=".//images/symbol-defs.svg#icon-antenna"></use>
@@ -89,8 +132,7 @@
                 формування позиції.
               </p>
             </li>
-            <!-- Peculiarities 2 -->
-            <li> 
+            <li class="specialities-articles__list">
               <div class="specialities-articles-icon">
                 <svg width="70" height="70">
                   <use href=".//images/symbol-defs.svg#icon-clock"></use>
@@ -98,12 +140,11 @@
               </div>
               <h3 class="specialities-articles-after">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="specialities-articles-tittle">
-                Завдання організації, особливо рамки і місце навчання кадрів тягне
-                у себе.
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
               </p>
             </li>
-            <!-- Peculiarities 3 -->
-            <li> 
+            <li class="specialities-articles__list">
               <div class="specialities-articles-icon">
                 <svg width="70" height="70">
                   <use href=".//images/symbol-defs.svg#icon-diagram"></use>
@@ -114,8 +155,7 @@
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <!-- Peculiarities 4 -->
-            <li> 
+            <li class="specialities-articles__list">
               <div class="specialities-articles-icon">
                 <svg width="70" height="70">
                   <use href=".//images/symbol-defs.svg#icon-astronaut"></use>
@@ -123,55 +163,42 @@
               </div>
               <h3 class="specialities-articles-after">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="specialities-articles-tittle">
-                Значимість цих проблем настільки очевидна, що реалізація планових
-                завдань.
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
               </p>
             </li>
           </ul>
         </div>
       </section>
-      <!-- PICTURE -->
-        <section class="section">
-          <div class="container">
-              <p class="picture-text">Чим ми займаємося</p>
-              <ul class="picture-list">
-                <li class="picture-list-item">
-                  <img
-                    src="./images/picture1.jpg"
-                    alt="photo"
-                    width="370"
-                  />
-                  <div class="picture-list-cont">
-                    <p class="picture-list-tittle">
-                      Десктопні додатки
-                    </p>
-                  </div>
-                </li>
-                <li class="picture-list-item">
-                  <img src="./images/picture2.jpg" alt="photo" width="370" />
-                  <div class="picture-list-cont">
-                    <p class="picture-list-tittle">
-                      Мобільні додатки
-                    </p>
-                  </div>
-                </li>
-                <li class="picture-list-item">
-                  <img src="./images/picture3.jpg" alt="photo" width="370" />
-                  <div class="picture-list-cont">
-                    <p class="picture-list-tittle">
-                      Дизайнерські рішення
-                    </p>
-                  </div>
-                </li>
-              </ul>
-          </div>
+      <section class="section picture-section">
+        <div class="container">
+          <p class="picture-text">Чим ми займаємося</p>
+          <ul class="picture-list">
+            <li class="picture-list-item">
+              <img src="./images/picture1.jpg" alt="photo" width="370" />
+              <div class="picture-list-cont">
+                <p class="picture-list-tittle">Десктопні додатки</p>
+              </div>
+            </li>
+            <li class="picture-list-item">
+              <img src="./images/picture2.jpg" alt="photo" width="370" />
+              <div class="picture-list-cont">
+                <p class="picture-list-tittle">Мобільні додатки</p>
+              </div>
+            </li>
+            <li class="picture-list-item">
+              <img src="./images/picture3.jpg" alt="photo" width="370" />
+              <div class="picture-list-cont">
+                <p class="picture-list-tittle">Дизайнерські рішення</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
-      <!-- OUR TEAM -->
-      <section class="container-team section">
+       <section class="container-team section">
        <div class="container">
           <h2 class="team-text">Наша команда</h2>
           <ul class="team-list">
-            <!-- PHOTO 1 -->
             <li class="team-list-item">
               <img src="./images/img-3.jpg" alt="photo 3" width="270" />
               <div class="team-list-link">
@@ -209,7 +236,6 @@
                 </ul>
               </div>
             </li>
-            <!-- PHOTO 2 -->
             <li class="team-list-item">
               <img src="./images/img-2.jpg" alt="photo 2" width="270" />
              <div class="team-list-link">
@@ -247,7 +273,6 @@
                 </ul>
              </div>
             </li>
-            <!-- PHOTO 3 -->
             <li class="team-list-item">
               <img src="./images/img-1.jpg" alt="photo 1" width="270" />
               <div class="team-list-link">
@@ -285,7 +310,6 @@
                 </ul>
               </div>
             </li>
-            <!-- PHOTO 4 -->
             <li class="team-list-item">
               <img src="./images/img.jpg" alt="photo" width="270" />
               <div class="team-list-link">
@@ -325,50 +349,49 @@
             </li>
           </ul>
        </div>
-      </section>
-      <!-- REGULAR -->
+      </section> 
       <section class="regular section">
         <div class="container">
           <h2 class="regular-tittle">Постійні клієнти</h2>
           <ul class="regular-list list">
-            <li class="regular-item">
+            <li class="regular-item regular-item__bottom regular-item__right">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="44" height="49">
                   <use href=".//images/symbol-defs.svg#icon-client1"></use>
                 </svg>
               </a>
             </li>
-            <li class="regular-item">
+            <li class="regular-item regular-item__bottom">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="40" height="52">
                   <use href=".//images/symbol-defs.svg#icon-client2"></use>
                 </svg>
               </a>
             </li>
-            <li class="regular-item">
+            <li class="regular-item regular-item__bottom regular-item__right">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="41" height="42">
                   <use href=".//images/symbol-defs.svg#icon-client3"></use>
                 </svg>
               </a>
             </li>
-            <li class="regular-item">
+            <li class="regular-item regular-item__bottom">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="79" height="42">
                   <use href=".//images/symbol-defs.svg#icon-client4"></use>
                 </svg>
               </a>
             </li>
-            <li class="regular-item">
+            <li class="regular-item regular-item__right">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="59" height="47">
                   <use href=".//images/symbol-defs.svg#icon-client5"></use>
                 </svg>
               </a>
             </li>
             <li class="regular-item">
               <a href="" class="regular-link link">
-                <svg class="regular-icon" width="106" height="60">
+                <svg class="regular-icon" width="88" height="45">
                   <use href=".//images/symbol-defs.svg#icon-client6"></use>
                 </svg>
               </a>
@@ -377,17 +400,14 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+     <footer class="footer">
       <div class="container footer-block">
         <div class="footer-section">
-          <!-- LOGO -->
           <a class="footer-logo link" href="./index.html"
             >Web<span class="footer-logo-text">Studio</span></a
           >
-          <!-- ADDRESS -->
           <address class="footer-container">
             <ul>
-              <!-- ADDRESS -->
               <li class="footer-container__list">
                 <a
                   class="footer-container__address link"
@@ -397,13 +417,11 @@
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <!-- MAIL -->
               <li class="footer-container__list">
                 <a class="footer-container__contacts link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <!-- TEL -->
               <li class="footer-container__list">
                 <a class="footer-container__contacts link" href="tel:+380961111111"
                   >+38 096 111 11 11</a
@@ -412,9 +430,7 @@
             </ul>
           </address>
         </div>
-        <!-- SOCIAL -->
         <div class="social">
-          <div class="container">
             <p class="social-tittle">приєднуйтесь</p>
             <ul class="social-list list">
               <li class="social-list__item">
@@ -446,9 +462,7 @@
                 </a>
               </li>
             </ul>
-          </div>
       </div>
-      <!-- INPUT -->
       <div class="input">
         <p class="input-tittle">Підпишіться на розсилку</p>
         <div class="input-container">
@@ -461,8 +475,7 @@
         </div>
       </div>
     </footer>
-    <!-- MODAL WINDOW -->
-    <div class="backdrop is-hidden" data-modal>
+     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg width="17" height="17">
@@ -509,12 +522,12 @@
             <use class="checkbox-icon_uncheck" href=".//images/icons.svg#icon-checkbox"></use>
             <use class="checkbox-icon_check" href=".//images/icons.svg#icon-icon-check"></use>
           </svg>
-          
-          Погоджуюся з розсилкою та приймаю <a class="input-text" href="">Умови договору</a>
+          <span class="input-main-text">Погоджуюся з розсилкою та приймаю <a class="input-text" href="">Умови договору</span></a>
         </label>
         <button class="modal-button" type="submit">Відправити</button>
       </div>
-    </div>
+    </div> 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

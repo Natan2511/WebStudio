@@ -3,6 +3,12 @@
   /* justify-content: center; */
   gap: 30px;
   margin-left: auto;
+  @media screen and(min-width:480px) {
+    display: block;
+  }
+  &__list {
+    margin-bottom: 30px;
+  }
   &-after {
     font-weight: 700;
     line-height: 16px;
@@ -10,20 +16,34 @@
     text-transform: uppercase;
     color: var(--very-dark-gray);
     padding-bottom: 10px;
+    @media screen and(min-width:480px) {
+      color: var(--very-dark-gray);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
   }
   &-tittle {
     line-height: 24px;
     letter-spacing: 0.03em;
     color: var(--dark-gray);
+    @media screen and(min-width:480px) {
+      width: 450px;
+      height: 50px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: var(--dark-gray);
+    }
   }
   &-icon {
     background: var(--light-grayish-blue);
-    border-radius: 4px;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    width: 270px;
+    padding: 25px;
+    text-align: center;
   }
 }
