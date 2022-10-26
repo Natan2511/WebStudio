@@ -170,8 +170,24 @@
 
   cursor: pointer;
 
+  &:hover {
+    outline: transparent;
+    color: var(--mostly-black);
+    border: 1px solid var(--dark-gray);
+  }
+
+  &:not(:placeholder-shown):hover:valid {
+    color: var(--vivid-blue);
+    border-color: var(--vivid-blue);
+  }
+
+  &:not(:placeholder-shown):hover:invalid {
+    color: var(--vivid-blue);
+    border-color: var(--vivid-blue);
+  }
   &:focus {
     outline: transparent;
+    color: var(--mostly-black);
     border: 1px solid var(--dark-gray);
   }
 
@@ -200,6 +216,9 @@
 
   transition: fill var(--transition-animation);
 
+  .callback__area:hover & {
+    fill: var(--vivid-blue);
+  }
   .callback__area:focus-within & {
     fill: var(--vivid-blue);
   }
@@ -244,11 +263,13 @@
 
   &:focus {
     outline: transparent;
-    border: 1px solid var(--dark-gray);
+    color: var(--mostly-black);
+    border: 1px solid var(--vivid-blue);
   }
   &:hover {
     outline: transparent;
-    border: 1px solid var(--dark-gray);
+    color: var(--mostly-black);
+    border: 1px solid var(--vivid-blue);
   }
 }
 
@@ -256,51 +277,48 @@
 
 .policy-block {
   display: flex;
-  align-items: baseline;
   justify-content: center;
+  align-items: center;
 
   margin-bottom: 30px;
 
   cursor: pointer;
 }
 
-// Каркас под иконку чекбокса
-
-.policy__icon::before {
-  display: inline-block;
-
-  content: "";
-
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 2px solid var(--very-dark-gray);
-  border-radius: 2px;
-  vertical-align: middle;
-
-  transition: all var(--transition-animation);
-}
-
-// Иконка чекбокса в нажатом состоянии
-
-.checkbox:checked + .policy__icon::before {
-  vertical-align: middle;
-
-  border-color: var(--vivid-blue);
-
-  background-color: var(--vivid-blue);
-  background-image: url(".//icons.svg#icon-icon-check");
-  background-size: contain;
-  background-origin: border-box;
-}
-
-// Текст рядом с чекбоксом
-
-.policy__text {
+.input-label-check {
+  display: flex;
+  justify-content: center;
+  gap: 8.38px;
+  margin-bottom: 30px;
+  position: relative;
   @media screen and (max-width: 1199px) {
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+  }
+  .input-text {
+    color: var(--vivid-blue);
+  }
+  .input-check {
+    gap: 8.38px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    &:checked + .checkbox-icon .checkbox-icon_uncheck {
+      opacity: 0;
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:checked + .checkbox-icon .checkbox-icon_check {
+      opacity: 1;
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  .checkbox-icon_check {
+    opacity: 0;
   }
 }
 

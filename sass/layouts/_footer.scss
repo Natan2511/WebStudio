@@ -17,10 +17,6 @@
     justify-content: space-around;
   }
 
-  @media screen and (max-width: 1199px) {
-    text-align: center;
-  }
-
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
@@ -61,13 +57,16 @@
 // Общий ьлок с адресом и лого в футере
 
 .address-block {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
   @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
-    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-right: 65px;
   }
 }
 
@@ -84,20 +83,15 @@
 /* Контакты в футере */
 
 .adress {
-  font-style: normal;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--white);
-
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
+    align-items: start;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -105,7 +99,7 @@
 
 .adress__map {
   margin-top: 0;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
@@ -130,8 +124,17 @@
 
 .adress__link {
   color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  width: 231px;
+  height: 21px;
 
   text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 
   transition: color var(--transition-animation);
 
@@ -144,11 +147,8 @@
 // Общий стиль лого
 
 .logo {
-  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16;
-  text-decoration: none;
 
   &__text {
     color: var(--vivid-blue);
@@ -170,6 +170,9 @@
 .networks {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -180,8 +183,24 @@
 // Тайтл блока
 
 .networks__title {
-  display: inline-block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-bottom: 20px;
 
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  display: flex;
   margin-bottom: 20px;
 
   line-height: 1.14;
@@ -227,6 +246,9 @@
 .subscribe {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -281,12 +303,14 @@
   }
 
   @media screen and (max-width: 767px) {
-    width: 100%;
+    width: 450px;
+    height: 50px;
     margin-bottom: 20px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 100%;
+    width: 450px;
+    height: 50px;
     margin-bottom: 20px;
   }
 

@@ -670,14 +670,18 @@
             <textarea name="commit" rows="5" placeholder="Введіть текст" class="callback__textarea"></textarea>
           </label>
 
-          <label class="policy-block">
-            <input class="checkbox visually-hidden" type="checkbox" name="policy" value="agree" required checked/>
-            <span class="policy__icon"></span>
-            <span class="policy__text">Погоджуюся з розсилкою та приймаю  <a href="#" class="policy__link">Умови договору</a></span>
-          </label>
+          <label class="input-label-check">
+          <input class="input-check visually-hidden" type="checkbox">
+          <svg class="checkbox-icon" width="16" height="15">
+            <use class="checkbox-icon_uncheck" href=".//images/icons.svg#icon-checkbox"></use>
+            <use class="checkbox-icon_check" href=".//images/icons.svg#icon-icon-check"></use>
+          </svg>
+          
+          Погоджуюся з розсилкою та приймаю <a class="input-text" href="">Умови договору</a>
+        </label>
 
           <div class="btn-block">
-            <button type="submit" class="btn callback__btn" aria-label="Отправялет форму">Отправить</button>
+            <button type="submit" class="btn callback__btn" aria-label="Отправялет форму">Відправити</button>
           </div>
         </form>
       </div>

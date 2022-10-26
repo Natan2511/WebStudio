@@ -96,22 +96,23 @@
 
   color: var(--white);
 
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-size: 26px;
   line-height: 42px;
   text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
 
   @media screen and (min-width: 1200px) {
-    font-family: "Roboto";
+    width: 696px;
+    height: 120px;
+    left: 452px;
+    top: 280px;
+
     font-style: normal;
     font-weight: 900;
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 44px;
+    line-height: 60px;
+
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;

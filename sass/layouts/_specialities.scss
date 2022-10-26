@@ -119,6 +119,12 @@
 // Текст элемента
 
 .features__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--dark-gray);
   margin-top: 0;
   margin-bottom: 0;
 }
