@@ -20,26 +20,17 @@
       <div class="container main-nav">
         <!-- Логотип в футере -->
             <a href="./index.html" class="header-logo"><span class="header-logo__text">Web</span>Studio</a>
-
-        <!-- Мобильное меню-бургер -->
-        <button type="button" class="mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-          <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
-            <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
-            <use class="icon-menu" href="./images/menu.svg#icon-menu"></use>
-          </svg>
-        </button>
-
-        <div class="menu-container" id="menu-container" data-menu>
+            <div class="menu-container">
           <nav>
             <ul class="menu">
               <li class="menu__item">
-                <a href="./index.html" class="menu__link menu__link--current">Студия</a>
+                <a href="./index.html" class="menu__link menu__link--current">Студія</a>
               </li>
               <li class="menu__item">
-                <a href="./portfolio.html" class="menu__link">Портфолио</a>
+                <a href="./portfolio.html" class="menu__link">Портфоліо</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Контакты</a>
+                <a href="#" class="menu__link">Контакти</a>
               </li>
             </ul>
           </nav>
@@ -68,6 +59,43 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <!-- Мобильное меню-бургер -->
+        <button type="button" class="mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
+            <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
+            <use class="icon-menu" href="./images/menu.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mob-menu">
+          <div class="container">
+            <div>
+              <button type="button" class="menu-close">
+                <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <ul>
+              <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--current link" href="">Студія</a></li>
+              <li class="mob-menu__item"><a class="mob-menu__link link" href="">Портфоліо</a></li>
+              <li class="mob-menu__item"><a class="mob-menu__link link" href="">Контакти</a></li>
+            </ul>
+            </div>
+            <div>
+              <ul>
+                <li class="mob-menu__connect--tel"><a class="mob-connect__tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                <li class="mob-menu__connect--mail"><a class="mob-connect__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              </ul>
+              <ul class="mob-menu__soc--link">
+                <li><a class="mob-menu__soc--item mob-menu__soc--item-current link" href="">Instagram</a></li>
+                <li><a class="mob-menu__soc--item mob-menu__soc--item-current link" href="">Twitter</a></li>
+                <li><a class="mob-menu__soc--item mob-menu__soc--item-current link" href="">Facebook</a></li>
+                <li><a class="mob-menu__soc--item link" href="">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
