@@ -770,6 +770,11 @@ summary {
   margin-right: 15px;
 }
 
+.menu-close:hover,
+.menu-close:focus {
+  fill: var(--vivid-blue);
+}
+
 .mob-menu__item {
   margin-bottom: 32px;
 }
