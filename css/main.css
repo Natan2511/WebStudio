@@ -773,7 +773,7 @@ summary {
   height: 100%;
   background-color: #fff;
   z-index: 1;
-  padding-bottom: 48px;
+  padding: 48px 40px;
   overflow: auto;
 }
 .mob-menu > .container {
@@ -786,10 +786,10 @@ summary {
 .menu-close {
   background-color: transparent;
   border: none;
-  margin-left: auto;
   display: block;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .menu-close:hover,
@@ -866,6 +866,7 @@ summary {
 
 .mob-menu__soc--link {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-menu__soc--link {
@@ -1848,7 +1849,7 @@ summary {
 }
 @media screen and (max-width: 767px) {
   .subscribe__input {
-    width: 450px;
+    width: 100%;
     height: 50px;
     margin-bottom: 20px;
   }
