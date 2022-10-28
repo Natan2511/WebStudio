@@ -122,9 +122,22 @@
   color: var(--very-dark-gray);
 
   font-weight: 700;
-  font-style: 20px;
   line-height: 1.15;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  @media screen and (max-width: 1198px) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 }
 
 // Обёртка для элемента формы
@@ -139,6 +152,9 @@
     &:focus-within {
       color: var(--vivid-blue);
     }
+  }
+  @media screen and (max-width: 767px) {
+    width: 370px;
   }
 }
 

@@ -534,9 +534,26 @@ summary {
   margin-bottom: 12px;
   color: var(--very-dark-gray);
   font-weight: 700;
-  font-style: 20px;
   line-height: 1.15;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .callback__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .callback__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 }
 
 .callback__group {
@@ -547,6 +564,11 @@ summary {
 @media screen and (max-width: 767px) {
   .callback__group:focus-within {
     color: var(--vivid-blue);
+  }
+}
+@media screen and (max-width: 767px) {
+  .callback__group {
+    width: 370px;
   }
 }
 
@@ -746,6 +768,7 @@ summary {
 .mob-menu {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -767,7 +790,6 @@ summary {
   display: block;
   margin-bottom: 30px;
   margin-top: 10px;
-  margin-right: 15px;
 }
 
 .menu-close:hover,
@@ -865,7 +887,6 @@ summary {
 }
 @media screen and (max-width: 767px) {
   .header {
-    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--white);
